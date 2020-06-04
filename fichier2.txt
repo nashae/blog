@@ -1,0 +1,59 @@
+ 
+config user global
+$ git config --global user.name "John Doe"
+$ git config --global user.email johndoe@example.com
+(enlever le global pour config sur un projet specifique)
+
+config couleur:
+$ git config --global color.diff auto
+$ git config --global color.status auto
+$ git config --global color.branch auto
+
+git config --list
+
+modif editeur et outil de merge
+$ git config --global core.editor notepad++
+$ git config --global merge.tool vimdiff
+
+creer un depot (à partir du dossier souhaité)
+$ git init
+
+associer depot local à depot distant existant
+$ git remote add OC https://github.com/OpenClassrooms-Student-Center/ProjetOpenSource.git
+
+cloner depot distant
+$ git clone https://github.com/OpenClassrooms-Student-Center/ProjetOpenSource.git
+
+voir branche
+$ git branch
+
+creer branche
+$ git branch nombranche
+
+changer de branche
+$ git checkout nombranche
+
+commit
+$ git commit -m “commentaire sur le commit”
+
+ajouter fichier
+git add
+
+3zones locales:
+working directory
+stage (on y ajoute les fichiers du working dir via git add)
+repository (on commit via git commit)
+
+creer branch master:
+creer un fichier dans le depot
+$ git add nomdufichier
+$git commit
+    mettre un com 
+    valider avec meta+x
+    
+supprimer une branche:
+$ git branch -d nombranche
+
+forcer suppression
+$ git branch -D nombranche
+!! supprime tous les fichiers et modif non comités sur cette branche
